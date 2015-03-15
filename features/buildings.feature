@@ -9,7 +9,6 @@ Feature: Accessing the service via a web page
        When I go to the buildings page
        Then I should see a list of buildings
 
-@wip
   Scenario: Looking up a building
       Given There are buildings in the database
        When I search for a building code using a valid building name

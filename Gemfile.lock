@@ -67,6 +67,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -94,4 +96,5 @@ DEPENDENCIES
   mysql2
   rake
   rspec
+  shoulda-matchers
   sinatra-activerecord

@@ -9,3 +9,6 @@ gem 'rake'
 gem 'byebug'
 gem 'mysql2'
 gem 'database_cleaner'
+group :test do
+    gem 'shoulda-matchers', require: false
+end
