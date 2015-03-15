@@ -1,0 +1,16 @@
+<h1>Hello</h1>
+<p>These are the buildings I know about</a>
+<table>
+<% @buildings.each do |building| %>
+  <tr id="<%= building.id %>">
+    <td><%= building.building_name %></td>
+    <td><%= building.building_code %></td>
+    <td>
+      <a href="/buildings/<%= building.id %>/edit">Edit</a>
+      |
+      <a href="/buildings/<%= building.id %>/delete" onClick="return confirm('Are you sure you want to delete this building');">Delete</a>
+    </td>
+  </tr>
+<% end %>
+</table>
+

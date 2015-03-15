@@ -1,0 +1,15 @@
+common: &common
+  pool:      20
+  adapter:   mysql2
+
+development:
+  database: buildings_development
+  username: root
+  password:
+  <<: *common
+
+test:
+  database: buildings_test
+  username: root
+  password:
+  <<: *common
