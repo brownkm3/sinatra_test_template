@@ -1,9 +1,16 @@
-<h1>Hello</h1>
-<p>Enter building name</p>
-<form action="/lookup/" method="POST">
-  Building name:<br>
-  <input type="text" name="building_name">
-  <br>
-  <input type="submit" value = "Look-up">
-</form>
-<a href="/buildings">View buildings</a>
+<div class="row">
+  <div class="col-sm-4">
+    <p>Enter building name</p>
+  </div>
+  <div class="col-sm-4">
+    <form action="/lookup/" method="POST">
+      Building name:<br>
+      <input type="text" name="building_name">
+      <br>
+      <input type="submit" value = "Look-up">
+    </form>
+  </div>
+  <div class="col-sm-4">
+    <a href="/buildings">View buildings</a>
+  </div>
+</div>

@@ -20,3 +20,14 @@ end
 Then "I should see the building code for that building" do
   expect(page.body).to have_content('AP_MLB')
 end
+
+When "I add a building" do
+  visit '/buildings/new'
+  fill_in('building_name', :with => 'Baynard')
+  fill_in('building_name', :with => 'BAY-EC')
+  click_button('Add')
+end
+
+Then "I should see that building on the buildings page" do
+  page.has_content?('Baynard')
+end

@@ -11,7 +11,7 @@ Then "I should see a page that is laid out properly" do
 end
 
 And "not looking like I drew it with a crayon" do
-  page.has_content?('jquery')
+  page.has_content?('container')
 end
 
 Then "I should see the lookup dialogue" do
