@@ -9,7 +9,7 @@ end
 
 Then "I should see the lookup dialogue" do
   expect(page.body).to have_content('Enter building name')
-  expect(page.body).to have_button('Look-up')
+  expect(page.body).to have_selector('input[type=submit]')
 end
 
 And "I should see the view buildings link" do
