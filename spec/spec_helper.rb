@@ -12,6 +12,7 @@ require 'byebug'
 require 'rack/test'
 require 'rspec'
 require 'shoulda-matchers'
+require 'accept_values_for'
 
 Dir[File.join(Sinatra::Application.root, 'spec', 'support', '**', '*.rb')].each { |f| require f }
 

@@ -1,0 +1,21 @@
+<% if @building && @building.errors.any? %>
+  <div id="building_error">
+    <h2>At least one error prohibited this article from being saved:</h2>
+    <ul>
+      <% @building.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<form role="form" action="/buildings/add/" method="POST">
+  <div class="form-group">
+    <label for="building_name">Building name:</label>
+    <input type="text" class="form-control" name="building_name">
+  </div>
+  <div class="form-group">
+    <label for="building_code">Building code:</label>
+    <input type="text" class="form-control" name="building_code">
+  </div>
+  <input type="submit" class="btn btn-default" value="Add building">
+</form>

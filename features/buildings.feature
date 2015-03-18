@@ -22,3 +22,8 @@ Feature: Accessing the service via a web page
   Scenario: Adding a building
       When I add a building
       Then I should see that building on the buildings page
+
+  Scenario: Trying to add an existing building name
+    Given There are buildings in the database
+    When I try to add a building which is already named in the database
+    Then I should see the message 'This building is already in the system'

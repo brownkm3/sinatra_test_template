@@ -13,15 +13,24 @@
     <!-- Ensure proper rendering and zooming on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>LLamageddon, the Musical</title>
+    <title>Llamageddon, the Musical</title>
   </head>
   <body>
-    <!-- use a responsive fixed-width container, rather than a fluid one -->
     <div class="container">
-      <div class="jumbotron">
-        <h1>Hello</h1>
+      <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Buildings Service</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="/buildings">View buildings</a></li>
+            <li><a href="/buildings/new">Add building</a></li> 
+          </ul>
+        </div>
       </div>
-      <%= yield %>
+      </nav>
+    <%= yield %>
     <div>
       <h6>No llamas were harmed in the making of this website</h6>
     </div>

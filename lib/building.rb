@@ -1,7 +1,6 @@
 require 'active_record'
 
 class Building < ActiveRecord::Base
-  def lookup building_name
-
-  end
+  validates :building_name, presence: true, uniqueness: { case_sensitive:false, message: "This building is already in the system"}
+  validates :building_code, presence: true, uniqueness: { case_sensitive:false, message: "This building code is already in the system"}
 end

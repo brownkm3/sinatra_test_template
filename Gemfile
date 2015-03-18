@@ -11,4 +11,5 @@ gem 'mysql2'
 gem 'database_cleaner'
 group :test do
     gem 'shoulda-matchers', require: false
+    gem 'accept_values_for'
 end

@@ -24,10 +24,20 @@ end
 When "I add a building" do
   visit '/buildings/new'
   fill_in('building_name', :with => 'Baynard')
-  fill_in('building_name', :with => 'BAY-EC')
+  fill_in('building_code', :with => 'BAY-EC')
   click_button('Add')
 end
 
 Then "I should see that building on the buildings page" do
-  page.has_content?('Baynard')
+  expect(page.body).to have_content('Baynard')
+end
+
+When "I try to add a building which is already named in the database" do
+  visit '/buildings/new'
+  fill_in('building_name', :with => 'Orion')
+  fill_in('building_code', :with => 'Some valid code')
+  click_button('Add')
+end
+Then "I should see the message 'This building is already in the system'" do
+  expect(page.body).to have_content('This building is already in the system')
 end
